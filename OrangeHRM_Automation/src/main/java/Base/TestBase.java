@@ -36,9 +36,10 @@ public class TestBase {
         driver.get(URL);
     }
 
-    @Parameters({"browserName", "URL"})
+    @Parameters({"URL"})
     @BeforeSuite(alwaysRun = true)
-    public void setup(String browserName, String url){
+    public void setup(String url){
+        String browserName = System.getProperty("browser");
         initialization(browserName, url);
     }
 
