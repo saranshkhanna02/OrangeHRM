@@ -16,11 +16,11 @@ public class HomeDashboard extends TestBase{
     }
 
     // Locators (preserved)
-    private final By Homebanner = By.xpath("//h6[normalize-space() = 'Dashboard']");
+    private final By HomeBanner = By.xpath("//h6[normalize-space() = 'Dashboard']");
     private final By Admin_button = By.xpath("//ul[@class = 'oxd-main-menu']/child::li[1]");
 
     public boolean isDashboardBannerDisplayed(){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(Homebanner)).isDisplayed();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(HomeBanner)).isDisplayed();
     }
 
     public void clickAdminButton(){

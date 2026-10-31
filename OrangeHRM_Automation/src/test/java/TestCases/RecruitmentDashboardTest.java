@@ -12,11 +12,11 @@ public class RecruitmentDashboardTest extends TestBase {
     public void recruitmentDashboardInitialize() {
         recruitmentDashboard = new RecruitmentDashboard();
     }
-    @Test(priority = 11)
+    @Test(priority = 1, groups = {"regression"})
     public void isRecruitmentBannerDisplayed() {
         Assert.assertTrue(recruitmentDashboard.isRecruitmentBannerDisplayed());
     }
-    @Test(priority = 12)
+    @Test(priority = 2, groups = {"regression"})
     public void testMyInfoButton(){
         recruitmentDashboard.clickMyInfoButton();
     }

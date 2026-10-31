@@ -13,11 +13,11 @@ public class AdminTest extends TestBase {
         adminDashboard = new AdminDashboard();
     }
 
-    @Test(priority = 3)
+    @Test(priority = 1, groups = {"regression"})
     public void adminBannerTest(){
         Assert.assertTrue(adminDashboard.isAdminBannerDisplayed());
     }
-    @Test(priority = 4, dependsOnMethods="adminBannerTest")
+    @Test(priority = 2, dependsOnMethods="adminBannerTest", groups = {"regression"})
     public void testPIMButton(){
         adminDashboard.clickPIMButton();
     }

@@ -12,11 +12,11 @@ public class LeaveDashboardTest extends TestBase {
     public void leaveDashboardInitialize(){
         leaveDashboard = new LeaveDashboard();
     }
-    @Test(priority = 7)
+    @Test(priority = 1, groups = {"regression"})
     public void leaveDashboardTest(){
         Assert.assertTrue(leaveDashboard.isLeaveBannerDisplayed());
     }
-    @Test(priority = 8, dependsOnMethods="leaveDashboardTest")
+    @Test(priority = 2, dependsOnMethods="leaveDashboardTest", groups = {"regression"})
     public void testTimeButton(){
         leaveDashboard.clickTimeButton();
     }

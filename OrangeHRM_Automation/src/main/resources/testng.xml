@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Automation" verbose="1" parallel="tests" thread-count="2" preserve-order="true">
+<suite name="Automation" verbose="1" thread-count="2">
     <!--   For browser-->
     <parameter name = "browserName" value = "chrome"/>
     <parameter name="URL" value ="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+<!--    <parameter name="URL" value ="https://app.parspec.io/login"/>-->
 
-    <test name="TestNG Test" preserve-order="true">
+    <listeners>
+    <listener class-name="listener.MySuiteListener"/>
+        <listener class-name="listener.MyTestListener"/>
+    </listeners>
+
+    <test name="TestNG Test">
+        <groups>
+            <run>
+                <include name="regression"/>
+<!--                <include name="smoke"/>-->
+            </run>
+        </groups>
         <classes>
             <class name="TestCases.LoginTest"/>
             <class name="TestCases.HomeDashboardTest"/>
@@ -16,6 +28,8 @@
             <class name="TestCases.RecruitmentDashboardTest"/>
             <class name="TestCases.MyInfoDashboardTest"/>
             <class name="TestCases.PerformanceDashboardTest"/>
+
+            <class name="TestCases.ParspecLoginTest"/>
         </classes>
     </test>
 </suite>

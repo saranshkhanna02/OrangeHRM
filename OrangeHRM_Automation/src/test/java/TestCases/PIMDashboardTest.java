@@ -12,11 +12,11 @@ public class PIMDashboardTest extends TestBase {
     public void pimInitialiseObject(){
         pimDashboard = new PIMDashboard();
     }
-    @Test(priority = 5)
+    @Test(priority = 1, groups = {"regression"})
     public void pimDashboardTest(){
         Assert.assertTrue(pimDashboard.isPIMBannerDisplayed());
     }
-    @Test(priority = 6, dependsOnMethods="pimDashboardTest")
+    @Test(priority = 2, dependsOnMethods="pimDashboardTest", groups = {"regression"})
     public void testLeaveButton(){
         pimDashboard.clickLeaveButton();
     }
