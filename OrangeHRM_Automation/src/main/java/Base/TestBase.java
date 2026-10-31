@@ -24,7 +24,6 @@ public class TestBase {
         else if (browserName.equalsIgnoreCase("firefox")){
 //            System.setProperty("webdriver.gecko.driver", TestUtils.WorkspacePath + "/src/Driver/geckodriver.exe");
             FirefoxOptions options = new FirefoxOptions();
-            options.setBinary(TestUtils.WorkspacePath + "/src/Driver/Firefox.exe");
             driver = new FirefoxDriver(options);
         }
     }
