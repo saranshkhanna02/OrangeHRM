@@ -13,11 +13,11 @@ public class HomeDashboardTest extends TestBase {
         homeDashboard = new HomeDashboard();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"regression"})
     public void homeDashboardBannerTest(){
         Assert.assertTrue(homeDashboard.isDashboardBannerDisplayed());
     }
-    @Test(priority = 2, dependsOnMethods = "homeDashboardBannerTest")
+    @Test(priority = 2, dependsOnMethods = "homeDashboardBannerTest", groups = {"regression"})
     public void testAdminButton(){
         homeDashboard.clickAdminButton();
     }

@@ -13,11 +13,11 @@ public class TimeDashboardTest extends TestBase {
         timeDashboard = new TimeDashboard();
     }
 
-    @Test(priority = 9)
+    @Test(priority = 1, groups = {"regression"})
     public void isTimeDashboardTest(){
         Assert.assertTrue(timeDashboard.isTimeBannerDisplayed());
     }
-    @Test(priority = 10, dependsOnMethods="isTimeDashboardTest")
+    @Test(priority = 2, dependsOnMethods="isTimeDashboardTest", groups = {"regression"})
     public void testRecruitmentButton(){
         timeDashboard.clickRecruitmentButton();
     }

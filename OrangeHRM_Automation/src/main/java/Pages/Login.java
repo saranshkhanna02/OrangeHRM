@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 public class Login extends TestBase {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     public Login(){
         PageFactory.initElements(driver, this);
     }

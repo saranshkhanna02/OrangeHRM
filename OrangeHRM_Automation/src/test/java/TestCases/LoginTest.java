@@ -12,7 +12,7 @@ public class LoginTest extends TestBase {
         login = new Login();
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void Login(){
         login.login();
     }

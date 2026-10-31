@@ -12,11 +12,11 @@ public class MyInfoDashboardTest extends TestBase {
     public void myInfoDashboardInitialize(){
         myInfoDashboard = new MyInfoDashboard();
     }
-    @Test(priority = 13)
+    @Test(priority = 1, groups = {"regression"})
     public void isMyInfoDashboardDisplayed(){
         Assert.assertTrue(myInfoDashboard.isMyInfoBannerDisplayed());
     }
-    @Test(priority = 14, dependsOnMethods="isMyInfoDashboardDisplayed")
+    @Test(priority = 2, dependsOnMethods="isMyInfoDashboardDisplayed", groups = {"regression"})
     public void testPerformanceButton(){
         myInfoDashboard.clickPerformanceButton();
     }

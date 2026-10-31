@@ -12,11 +12,11 @@ public class PerformanceDashboardTest extends TestBase {
     public void performanceDashboardInitialize(){
         performanceDashboard = new PerformanceDashboard();
     }
-    @Test(priority = 15)
+    @Test(priority = 1, groups = {"regression"})
     public void isPerformanceBannerDisplayed(){
         Assert.assertTrue(performanceDashboard.isPerformanceBannerDisplayed());
     }
-    @Test(priority = 16)
+    @Test(priority = 2, groups = {"regression"})
     public void testDashboardButton(){
         performanceDashboard.clickDashboardButton();
     }
